@@ -62,12 +62,14 @@ The `ejectOperator` function of the `RegistryCoordinator` contract allows the ej
 
 | Contract | Function | Event | Notes
 |---|---|---|---
-| RegistryCoordinator | registerOperator | OperatorRegistered(operator, operatorId) | If the operator is not registered or has been deregistered, the operator can be registered.
+| RegistryCoordinator | registerOperator | OperatorSocketUpdate(operatorId, socket) | -
+| | | OperatorRegistered(operator, operatorId) | If the operator is not registered or has been deregistered, the operator can be registered.
 | | deregisterOperator | OperatorDeregistered(operator, operatorId) | -
+| | updateOperatorsForQuorum | QuorumBlockNumberUpdated(quorumNumber, blocknumber) | -
+| | updateSocket | OperatorSocketUpdate(operatorId, socket) | -
 | | setOperatorSetParams | OperatorSetParamsUpdated(quorumNumber, operatorSetParams) | -
 | | setChurnApprover | ChurnApproverUpdated(churnApprover) | -
 | | setEjector | EjectorUpdated(ejector) | -
-| | updateOperatorsForQuorum | QuorumBlockNumberUpdated(quorumNumber, blocknumber) | -
 | MACPubkeyRegistry | registerMACPubkey | NewPubkeyRegistration(operator, pubkeyInMAC, rawInitialSessionKeys) | The `rawInitialSessionKeys` will not saved in the contract storage.
 | | registerOperator | OperatorAddedToQuorum(operator, quorumNumber) | -
 | | deregisterOperator | OperatorRemovedFromQuorum(operator, quorumNumber) | -
