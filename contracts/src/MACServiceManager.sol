@@ -3,7 +3,7 @@ pragma solidity =0.8.12;
 
 import "@eigenlayer/src/contracts/interfaces/IDelegationManager.sol";
 import "@eigenlayer/src/contracts/libraries/BytesLib.sol";
-import "@eigenlayer-middleware/src/ServiceManagerBase.sol";
+import "./ServiceManagerBase.sol";
 
 /**
  * @title Primary entrypoint for procuring services from IncredibleSquaring.
